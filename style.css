@@ -12,24 +12,31 @@
 
 body {
   min-height: 100vh;
+
   display: grid;
-  word-wrap: normal;
+
   place-content: center;
   text-align: center;
+
   font-family: "Source Sans Pro", sans-serif;
+  
   background-color: var(--bg-color);
 }
 
 h1 {
-  width: max-content;
-  font-size: clamp(1rem, 3vw + 1rem, 4rem);
   position: relative;
+  
+  width: max-content;
+
+  font-size: clamp(1rem, 3vw + 1rem, 4rem);
   font-family: "Source Code Pro", monospace;
+  
 }
 
 h1::before,
 h1::after {
   content: "";
+
   position: absolute;
   top: 0;
   right: 0;
@@ -46,6 +53,7 @@ h1::before {
 h1::after {
   width: 0.125em;
   background-color: black;
+
   animation: typewriter var(--typewriterSpeed)
       steps(var(--typewriterCharacters)) 1s forwards,
     blink 750ms steps(var(--typewriterCharacters)) infinite;
@@ -53,10 +61,14 @@ h1::after {
 
 .subtitle {
   color: hsl(0 0% 0% / 0.7);
+
   font-size: 2rem;
   font-weight: 400;
+  
   opacity: 0;
+  
   transform: translateY(3rem);
+  
   animation: fadeInUp 2s ease calc(var(--typewriterSpeed) + 2s) forwards;
 }
 
